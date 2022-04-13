@@ -1030,3 +1030,49 @@ puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
 puma (4.3.12) lib/puma/server.rb:476:in `process_client'
 puma (4.3.12) lib/puma/server.rb:332:in `block in run'
 puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-04-13 14:11:57 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PostsController#index as HTML
+Filter chain halted as :basic_auth rendered or redirected
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 531)
+
+
+Started GET "/" for ::1 at 2022-04-13 14:12:06 +0900
+Processing by PostsController#index as HTML
+Filter chain halted as :basic_auth rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 423)
+
+
+Started GET "/" for ::1 at 2022-04-13 14:12:25 +0900
+Processing by PostsController#index as HTML
+Filter chain halted as :basic_auth rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 427)
+
+
+Started GET "/" for ::1 at 2022-04-13 14:12:33 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY `posts`.`id` DESC[0m
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4848)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/mycomputer/projects/ajax_app/public/packs
+[Webpacker] Hash: e901bb6f5d3361a6c9d5
+Version: webpack 4.46.0
+Time: 537ms
+Built at: 2022/04/13 14:12:34
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-87c346f0556b22f0594f.js    125 KiB  application  [emitted] [immutable]  application
+js/application-87c346f0556b22f0594f.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-87c346f0556b22f0594f.js js/application-87c346f0556b22f0594f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/memo.js] 1.1 KiB {application} [built]
+[./app/javascript/packs/application.js] 770 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 1539ms (Views: 1510.3ms | ActiveRecord: 4.5ms | Allocations: 19120)
+
+
